@@ -10,7 +10,7 @@ public class CPF {
         this.cpf = cpf;
     }
 
-    public String getCpf() {
+    public String getNumero() {
         return cpf;
     }
 }
