@@ -1,4 +1,4 @@
-package br.com.alura.academico.escola.dominio.aluno;
+package br.com.alura.escola.academico.dominio.aluno;
 
 public class Telefone {
     private String ddd;

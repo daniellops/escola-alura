@@ -1,8 +1,8 @@
-package br.com.alura.academico.escola.aplicacao.aluno.matricular;
+package br.com.alura.escola.academico.aplicacao.aluno.matricular;
 
-import br.com.alura.academico.escola.dominio.aluno.Aluno;
-import br.com.alura.academico.escola.dominio.aluno.Email;
-import br.com.alura.academico.escola.dominio.aluno.CPF;
+import br.com.alura.escola.academico.dominio.aluno.Aluno;
+import br.com.alura.escola.academico.dominio.aluno.Email;
+import br.com.alura.escola.shared.dominio.CPF;
 
 public class MatricularAlunoDto {
     private String nomeAluno;

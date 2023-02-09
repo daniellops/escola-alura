@@ -1,9 +1,9 @@
-package br.com.alura.academico.escola.infra.aluno;
+package br.com.alura.escola.academico.infra.aluno;
 
-import br.com.alura.academico.escola.dominio.aluno.Aluno;
-import br.com.alura.academico.escola.dominio.aluno.AlunoNaoEncontrado;
-import br.com.alura.academico.escola.dominio.aluno.CPF;
-import br.com.alura.academico.escola.dominio.aluno.RepositorioDeAlunos;
+import br.com.alura.escola.academico.dominio.aluno.Aluno;
+import br.com.alura.escola.academico.dominio.aluno.AlunoNaoEncontrado;
+import br.com.alura.escola.academico.dominio.aluno.RepositorioDeAlunos;
+import br.com.alura.escola.shared.dominio.CPF;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,7 @@ public class RepositorioDeAlunosEmMemoria implements RepositorioDeAlunos {
     @Override
     public Aluno buscarPorCPF(CPF cpf) {
         return this.matriculados.stream()
-                .filter(a -> a.getCpf().equals(cpf.getNumero()))
+                .filter(a -> a.getCpf().equals(cpf))
                 .findFirst()
                 .orElseThrow(() -> new AlunoNaoEncontrado(cpf));
     }

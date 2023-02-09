@@ -1,6 +1,6 @@
-package br.com.alura.academico.escola.aplicacao.indicacao;
+package br.com.alura.escola.academico.aplicacao.indicacao;
 
-import br.com.alura.academico.escola.dominio.aluno.Aluno;
+import br.com.alura.escola.academico.dominio.aluno.Aluno;
 
 public interface EnviarEmailIndicacao {
     void enviarPara(Aluno indicado);

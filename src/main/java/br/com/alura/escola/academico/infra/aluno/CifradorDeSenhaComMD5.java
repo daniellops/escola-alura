@@ -1,6 +1,6 @@
-package br.com.alura.academico.escola.infra.aluno;
+package br.com.alura.escola.academico.infra.aluno;
 
-import br.com.alura.academico.escola.dominio.aluno.CifradorDeSenha;
+import br.com.alura.escola.academico.dominio.aluno.CifradorDeSenha;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

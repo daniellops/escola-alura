@@ -1,7 +1,7 @@
-package br.com.alura.academico.escola.infra.aluno;
+package br.com.alura.escola.academico.infra.aluno;
 
-import br.com.alura.academico.escola.dominio.aluno.*;
-import br.com.alura.escola.dominio.aluno.*;
+import br.com.alura.escola.academico.dominio.aluno.*;
+import br.com.alura.escola.shared.dominio.CPF;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -23,7 +23,7 @@ public class RepositorioDeAlunosComJDBC implements RepositorioDeAlunos {
             String sql = "INSERT INTO ALUNO VALUES (?, ?, ?)";
 
             PreparedStatement ps = connection.prepareStatement(sql);
-            ps.setString(1, aluno.getCpf());
+            ps.setString(1, aluno.getCpf().getNumero());
             ps.setString(2, aluno.getNome());
             ps.setString(3, aluno.getEmail());
             ps.execute();

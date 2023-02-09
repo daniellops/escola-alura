@@ -1,4 +1,6 @@
-package br.com.alura.academico.escola.dominio.aluno;
+package br.com.alura.escola.academico.dominio.aluno;
+
+import br.com.alura.escola.shared.dominio.CPF;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,11 +20,14 @@ public class Aluno {
     }
 
     public void adicionarTelefone(String ddd, String numero) {
-        telefones.add(new Telefone(ddd, numero));
+        if (telefones.size() == 2) {
+            throw new IllegalArgumentException("Numero maximo de telefones ja atingido!");
+        }
+        this.telefones.add(new Telefone(ddd, numero));
     }
 
-    public String getCpf() {
-        return cpf.getNumero();
+    public CPF getCpf() {
+        return cpf;
     }
 
     public String getNome() {
@@ -35,5 +40,9 @@ public class Aluno {
 
     public List<Telefone> getTelefones() {
         return telefones;
+    }
+
+    public String getSenha() {
+        return senha;
     }
 }
